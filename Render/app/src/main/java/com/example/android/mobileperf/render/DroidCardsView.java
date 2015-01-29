@@ -90,14 +90,38 @@ class DroidCardsView extends View {
      */
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
         // Don't draw anything until all the Asynctasks are done and all the DroidCards are ready.
         if (mDroids.length > 0 && mDroidCards.size() == mDroids.length) {
             // Loop over all the droids, except the last one.
-            for (int i = 0; i < mDroidCards.size(); i++) {
+            int i;
+            for (i = 0; i < mDroidCards.size() - 1; i++) {
+
                 // Each card is laid out a little to the right of the previous one.
                 mCardLeft = i * mCardSpacing;
+
+                // Save the canvas state.
+                canvas.save();
+
+                // Restrict the drawing area to only what will be visible.
+                canvas.clipRect(
+                        mCardLeft,
+                        0,
+                        mCardLeft + mCardSpacing,
+                        mDroidCards.get(i).getHeight()
+                );
+
+                // Draw the card. Only the parts of the card that lie within the bounds defined by
+                // the clipRect() get drawn.
                 drawDroidCard(canvas, mDroidCards.get(i), mCardLeft, 0);
+
+                // Revert canvas to non-clipping state.
+                canvas.restore();
             }
+
+            // Draw the final card. This one doesn't get clipped.
+            drawDroidCard(canvas, mDroidCards.get(mDroidCards.size() - 1),
+                    mCardLeft + mCardSpacing, 0);
         }
 
         // Invalidate the whole view. Doing this calls onDraw() if the view is visible.
