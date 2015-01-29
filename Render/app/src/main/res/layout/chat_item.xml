@@ -15,14 +15,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#78A"
-            android:background="@android:color/white"
             android:orientation="horizontal">
 
             <TextView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -46,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="@dimen/narrow_space"
-            android:background="@android:color/white"
             android:id="@+id/chat_text" />
     </LinearLayout>
+
 </LinearLayout>
