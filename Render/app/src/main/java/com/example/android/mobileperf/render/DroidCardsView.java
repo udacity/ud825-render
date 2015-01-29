@@ -138,17 +138,12 @@ class DroidCardsView extends View {
 
         // Draw outer rectangle.
         paint.setAntiAlias(true);
-        paint.setColor(Color.WHITE);
-        paint.setStyle(Paint.Style.FILL);
         Rect cardRect = new Rect(
                 (int)left,
                 (int)top,
                 (int)left + (int) droidCard.getWidth(),
                 (int)top + (int) droidCard.getHeight()
         );
-        canvas.drawRect(cardRect, paint);
-
-        // Draw border.
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.DKGRAY);
         canvas.drawRect(cardRect, paint);
