@@ -29,6 +29,11 @@ public class ChatumLatinumActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatum_latinum);
 
+        // The Theme's windowBackground is masked by the opaque background of the activity, and
+        // the windowBackground causes an unnecessary overdraw. Nullifying the windowBackground
+        // removes that overdraw.
+        getWindow().setBackgroundDrawable(null);
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.activity_chatum_latinum_container, new ChatsFragment())
