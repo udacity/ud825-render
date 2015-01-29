@@ -37,6 +37,9 @@ public class MainActivity extends ActionBarActivity {
 
         addButton(ChatumLatinumActivity.class,
                 getString(R.string.title_activity_chatum_latinum), activityContainer);
+
+        addButton(DroidCardsActivity.class,
+                getString(R.string.title_activity_droid_cards), activityContainer);
     }
 
     private void addButton(final Class destination, String description, ViewGroup parent) {

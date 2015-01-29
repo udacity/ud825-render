@@ -20,6 +20,10 @@
             android:name=".ChatumLatinumActivity"
             android:label="@string/title_activity_chatum_latinum" >
         </activity>
+        <activity
+            android:name=".DroidCardsActivity"
+            android:label="@string/title_activity_droid_cards" >
+        </activity>
     </application>
 
 </manifest>
