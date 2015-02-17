@@ -24,6 +24,10 @@
             android:name=".DroidCardsActivity"
             android:label="@string/title_activity_droid_cards" >
         </activity>
+        <activity
+            android:name=".CompareLayoutsActivity"
+            android:label="@string/title_activity_compare_layouts" >
+        </activity>
     </application>
 
 </manifest>
