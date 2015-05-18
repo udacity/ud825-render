@@ -100,8 +100,6 @@ class DroidCardsView extends View {
             }
         }
 
-        // Invalidate the whole view. Doing this calls onDraw() if the view is visible.
-        invalidate();
     }
 
     /**
@@ -231,6 +229,7 @@ class DroidCardsView extends View {
             if (mDroidCardsReference != null && bitmap != null) {
                 // Create a new DroidCard.
                 mDroidCards.add(new DroidCard(droid, bitmap));
+                invalidate();
             }
         }
     }
