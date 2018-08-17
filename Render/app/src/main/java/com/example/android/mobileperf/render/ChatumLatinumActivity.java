@@ -17,13 +17,13 @@
 package com.example.android.mobileperf.render;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Displays a fragment that contains a ListView holding several Chat objects. Used in this lesson
  * to show a) how to reduce overdraws, and b) how to flatten needlessly nested hierarchies.
  */
-public class ChatumLatinumActivity extends ActionBarActivity {
+public class ChatumLatinumActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
